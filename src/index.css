@@ -1,0 +1,894 @@
+/* ----------------------- GLOBAL ----------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  font-family: 'Englebert', serif;
+  background-color: #f5f8ff;
+  color: #1e2a38;
+}
+
+/* ----------------------- HEADER ----------------------- */
+header {
+  background-color: #0077cc;
+  height: 50em;
+  background-image: url("/Header-bild.JPEG");
+  background-size: cover;
+  background-position: center;
+  font-family: "Emblema One", serif;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 1em;
+  background-color: rgba(0, 51, 102, 0.8);
+  border-bottom: 3px solid #005fa3;
+}
+
+nav ul li {
+  margin: 0.8em 1.4em;
+  border-radius: 8px;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+nav ul li a {
+  display: block;
+  padding: 0.6em 1.2em;
+  text-decoration: none;
+  background-color: #005fa3;
+  color: #ffffff;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+nav ul li.currentSite a {
+  background-color: #ffcc00;
+  color: #003366;
+}
+
+nav ul li a:hover {
+  background-color: #ffcc00;
+  color: #003366;
+  transform: scale(1.05);
+}
+
+.hamburger {
+  width: 2.25em;
+  height: 2em;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  position: fixed;
+  top: 3rem;
+  right: 5rem;
+  z-index: 10001;
+}
+
+.hamburger span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: #fff;
+  border-radius: 3px;
+  transition: all 0.6s cubic-bezier(.68,-0.55,.27,1.55);
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: translateY(14px) rotate(45deg);
+  background: #ffcc00;
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-14px) rotate(-45deg);
+  background: #ffcc00;
+}
+
+.nav-link.active {
+  background-color: #ffcc00;
+  color: #000;
+}
+
+/* ----------------------- ASIDE & MAIN ----------------------- */
+.grid-container{
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 0.0em;
+    grid-template-areas:
+    "left middle";
+}
+
+.homeAside{
+    background-color: royalblue;
+    padding: 10%;
+    background-image: url("Aside-picture.JPEG");
+    background-size: cover;
+    background-position: center;
+    grid-area: left;
+}
+
+.homeAsideContent{
+    background-color: rgba(39, 39, 39, 0.6);
+    padding: 1em;
+    margin: 1em;
+    color: white;
+    border-radius: 1em;
+}
+
+.aside-h3{
+    font-size: 2.1em;
+    margin: 0.5em 0.5em;
+    display: flex;
+    justify-content: center;
+    font-family: "Emblema One", serif;
+    color: rgb(236, 243, 203);
+}
+
+.homeMain{
+    background-color: rgb(3, 255, 255);
+    padding: 1em;
+    grid-area: middle;
+    background-image: url("main2.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.fun-fact{
+    padding: 1em;
+    margin: 1em;
+    color: rgb(255, 204, 102);
+    font-size: 1.2em;
+    font-family: "Englebert", serif;
+    line-height: 1.8;
+    border: #5254ac solid 2px;
+    border-radius: 1em;
+}
+
+.homeMainContent {
+    background-color: rgba(0, 0, 0, 0.315);
+    padding: 1em;
+    margin: 1em;
+    color: rgb(255, 255, 255);
+    line-height: 1.8;
+}
+
+#mainHeading{
+    font-size: 2em;
+    margin: 0.5em 0.5em;
+    display: flex;
+    justify-content: center;
+    color: rgb(236, 243, 203);
+    font-family: "Emblema One", serif;
+}
+
+.homeMainContentEnd{
+    display: flex;
+    justify-content: center;
+    color: rgb(236, 243, 203);
+}
+
+.mainText {
+    color: #fdf0d6;
+    font-size: 1.1em;
+    font-family: "Englebert", serif;
+}
+
+.inlineLink {
+    color: #fdf0d6;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.inlineLink:hover {
+    color: #ffcc00;
+    transform: scale(2.1em);
+}
+
+/* ----------------------- FOOTER ----------------------- */
+.siteFooter {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    text-align: center;
+    padding: 2% 5%;
+    font-size: 1.1em;
+}
+
+.footerContent {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.footerLinks p {
+    margin: 1em 0;
+}
+
+.footerLinks a {
+    color: #4da6ff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.footerLinks a:hover {
+    color: #ffcc00;
+}
+
+.socialLinks a {
+    margin: 0 2.5%;
+    display: inline-block;
+}
+
+.socialLinks i {
+    font-size: 2em;
+    transition: color 0.3s ease, transform 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+.socialLinks i:hover {
+    color: #ffcc00;
+    transform: scale(1.2);
+}
+
+.footerQuote em {
+    font-size: 1.2em;
+    color: #ffcc00;
+    font-style: italic;
+}
+
+.footerBottom {
+    margin-top: 2em;
+    font-size: 0.875em;
+    color: #999999;
+}
+
+/* ----------------------- Om mig ----------------------- */
+.aboutMain {
+    padding: 3em;
+    background-image: url("about-main.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 80vh;
+}
+
+.aboutMainContent {
+    background-color: rgba(0, 0, 0, 0.55);
+    padding: 2.5em;
+    margin: 0 auto;
+    color: white;
+    font-size: 1.1em;
+    border-radius: 1em;
+    max-width: 700px;
+    box-shadow: 0 4px 24px #00336633;
+}
+
+#aboutHeading {
+    color: rgb(236, 243, 203);
+    font-family: "Emblema One", serif;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.aboutIntro {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.aboutIntro img {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    border: 3px solid #ffcc00;
+    margin-bottom: 1em;
+    box-shadow: 0 0 12px #00336644;
+}
+
+.aboutIntro h2 {
+    color: #ffcc00;
+    font-family: "Emblema One", serif;
+    margin: 0.5em 0 0.2em 0;
+    font-size: 1.5em;
+}
+
+.aboutMainText {
+    color: #fdf0d6;
+    font-family: "Englebert", serif;
+    line-height: 1.6;
+}
+
+.aboutEnd {
+    color: rgb(236, 243, 203);
+    font-size: 1.2em;
+    font-family: "Emblema One", serif;
+    text-align: center;
+    margin-top: 2em;
+}
+
+/* ----------------------- Erfarenhet sidan ----------------------- */
+.experienceMain {
+    color: #fdf0d6;
+    min-height: 100vh;
+    background-image: url("work-picture.jpg");
+    background-size: cover;
+    background-position: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 2em 0;
+    overflow: hidden;
+}
+
+.experienceDiv {
+    background-color: rgba(26, 26, 26, 0.8);
+    padding: 3em;
+    width: 85%;
+    max-width: 1200px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+}
+
+.experienceHeader {
+    text-decoration: underline;
+    text-decoration-color: #474aff;
+    font-size: 5vw;
+    font-family: "Emblema One", serif;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+#gridContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2em;
+    margin-top: 2em;
+}
+
+.job {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2em;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out, background 0.3s;
+}
+
+.job:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.job h3 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+    color: #ffffff;
+    font-family: "Emblema One", serif;
+    text-align: center;
+}
+
+.job p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #fdf0d6;
+    font-family: "Englebert", serif;
+}
+
+.experienceDiv i {
+    color: #7476f5;
+}
+
+.experienceDiv strong {
+    color: #ffcc00;
+}
+
+/* ----------------------- TECHDECK / PORTFOLIO ----------------------- */
+.techdeck-bg {
+  min-height: 100vh;
+  background: radial-gradient(ellipse at center, #191f2b 60%, #161a20 100%);
+  padding: 2.5em 0 2em 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.techdeck-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  background: rgba(30, 30, 30, 0.92);
+  border-radius: 22px;
+  box-shadow: 0 10px 48px #0008;
+  padding: 2.2em 1.2em 3em 1.2em;
+  margin: 0 auto;
+}
+
+.techdeck-header {
+  color: #fff8d6;
+  font-family: "Emblema One", serif;
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 0.7em;
+  letter-spacing: 2px;
+  text-shadow: 0 3px 12px #0007;
+  border-bottom: 4px solid #3848f0;
+  padding-bottom: 0.12em;
+}
+
+.techdeck-subheader {
+  text-align: center;
+  background: #3848f0d0;
+  color: #fff8d6;
+  border-radius: 12px;
+  padding: 0.85em 0.5em;
+  margin-bottom: 2em;
+  font-size: 1.4rem;
+  font-family: "Emblema One", serif;
+  box-shadow: 0 2px 14px #23247e77;
+}
+
+.techdeck-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6em;
+  margin: 2.5em 0;
+}
+
+.no-projects-message {
+  color: #003366;
+  text-align: center;
+  font-size: 1.1em;
+  margin: 1em 0;
+}
+
+.github-project {
+  background: rgba(245, 240, 240, 0.144);
+  padding: 1.3em 1em;
+  border-radius: 10px;
+  margin-bottom: 1.5em;
+  box-shadow: 0 2px 8px #00336612;
+}
+
+.project-header {
+  display: flex;
+  align-items: center;
+  gap: 0.8em;
+  margin-bottom: 0.8em;
+}
+
+.project-language-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 7px;
+  background: #fff;
+}
+
+.project-title {
+  margin: 0;
+  font-size: 1.13em;
+  font-family: "Emblema One", serif;
+  color: #f4f8fc;
+}
+
+.no-desc {
+  color: #ecf007;
+}
+
+.github-link {
+  margin-top: 0.5em;
+}
+.github-link a {
+  color: #c1c7d3;
+  font-size: 1.4em;
+  transition: color 0.2s;
+}
+.github-link a:hover {
+  color: #ffcc00;
+}
+
+
+/* Loading om projektet inte hittas */
+.loader {
+  width: 100px;
+  height: 60px;
+  display: flex;
+  margin: 2em auto 2em auto;
+  animation: l12-0 2s infinite linear;
+}
+
+.loader::before,
+.loader::after  {
+  content: "";
+  flex: 4;
+  background: 
+    radial-gradient(at 50% 20%, #0000, #000a) bottom left/20px 20px repeat-x,
+    linear-gradient(red 0 0) bottom/100% 20px no-repeat
+    #ddd;
+  -webkit-mask:
+    repeating-linear-gradient(90deg, #000 0 4px, #0000 0 20px) 8px 0,
+    radial-gradient(farthest-side, #000 90%, #0000) left bottom/20px 20px repeat-x;
+  mask:
+    repeating-linear-gradient(90deg, #000 0 4px, #0000 0 20px) 8px 0,
+    radial-gradient(farthest-side, #000 90%, #0000) left bottom/20px 20px repeat-x;
+}
+
+.loader::after {
+  flex: 1;
+  transform-origin: top;
+  animation: l12-1 1s cubic-bezier(0,20,1,20) infinite;
+}
+@keyframes l12-0 { 
+ 0%,49.9% {transform: scaleX(1)}
+ 50%,100% {transform: scaleX(-1)}
+}
+@keyframes l12-1 { 
+ 100% {transform: rotate(-2deg)}
+}
+
+/* Grid för GitHub-projektkort */
+.techdeck-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 2.2em 2em;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (max-width: 850px) {
+  .techdeck-grid {
+    grid-template-columns: 1fr;
+    gap: 1.3em 0;
+  }
+}
+
+/* Projektkort */
+.techdeck-card {
+  background: rgba(21,22,31,0.88);
+  color: #fff8e0;
+  border-radius: 14px;
+  box-shadow: 0 2px 16px #19193b88;
+  padding: 1.7em 1.2em 1.3em 1.2em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+  transition: transform 0.20s, box-shadow 0.20s;
+  position: relative;
+  min-height: 135px;
+  min-width: 0;
+}
+.techdeck-card:hover {
+  transform: translateY(-7px) scale(1.025);
+  box-shadow: 0 6px 36px #23237e99;
+  background: rgba(34,36,46,0.99);
+}
+
+.techdeck-card-title {
+  font-family: "Emblema One", serif;
+  color: #fff;
+  font-size: 1.18em;
+  margin-bottom: 0.2em;
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  font-weight: 600;
+  text-shadow: 0 1px 8px #0008;
+}
+
+.techdeck-card-title .icon {
+  font-size: 1.6em;
+  vertical-align: middle;
+  margin-right: 0.09em;
+}
+
+.techdeck-card-desc {
+  color: #f6eed7;
+  font-size: 1.05em;
+  margin-bottom: 1.0em;
+  font-family: 'Englebert', serif;
+}
+
+.techdeck-card-links {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+}
+
+.techdeck-card-link {
+  color: #649eff;
+  font-size: 1.13em;
+  text-decoration: none;
+  margin-right: 0.5em;
+  display: flex;
+  align-items: center;
+  gap: 0.22em;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.techdeck-card-link:hover {
+  color: #ffcc00;
+}
+
+.techdeck-card-ghicon {
+  color: #fff;
+  font-size: 1.45em;
+  margin-left: 0.09em;
+  vertical-align: middle;
+}
+
+.techdeck-lang-icon {
+  font-size: 1.5em;
+  margin-right: 0.35em;
+  vertical-align: middle;
+}
+
+.techdeck-lang-csharp {
+  color: #aa9cff;
+}
+.techdeck-lang-html {
+  color: #fa6f25;
+}
+
+/* ----------------------- KONTAKT ----------------------- */
+#contactMain {
+    background: radial-gradient(circle at 80% 80%, #0077cc 10%, #001f3f 100%);
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-container {
+    background: rgba(13, 34, 69, 0.95);
+    box-shadow: 0 8px 32px 0 rgba(0,31,63,0.15);
+    border-radius: 22px;
+    padding: 3.2em 2.2em 2em 2.2em;
+    max-width: 430px;
+    width: 100%;
+    margin: 3em 1em;
+    border: 2.5px solid #194b8c50;
+    position: relative;
+    transition: box-shadow 0.3s;
+}
+.contact-container:hover {
+    box-shadow: 0 8px 40px 0 #474aff55;
+}
+
+.contact-container h1 {
+    color: #ffcc00;
+    text-align: center;
+    margin-bottom: .4em;
+    letter-spacing: 1px;
+    font-size: 2.2em;
+    font-family: "Emblema One", serif;
+}
+.contact-container p {
+    text-align: center;
+    color: #fdf0d6;
+    margin-bottom: 1.5em;
+    font-size: 1.07em;
+    line-height: 1.5;
+}
+
+.contact-avatar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.2em;
+}
+.contact-avatar img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 3px solid #ffcc00;
+    object-fit: cover;
+    box-shadow: 0 0 10px #00336622;
+}
+
+form label {
+    color: #ffcc00;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.3em;
+    display: block;
+    font-size: 1em;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 0.85em 1em;
+    margin: 6px 0 22px 0;
+    border: none;
+    border-radius: 9px;
+    font-size: 1.08em;
+    background: #f6f8fb;
+    color: #003366;
+    box-shadow: 0 2px 8px rgba(71, 74, 255, 0.05);
+    transition: box-shadow 0.2s, border 0.2s, background 0.2s;
+}
+
+form input:focus, form textarea:focus {
+    outline: none;
+    border: 2px solid #ffcc00;
+    background: #fff;
+    box-shadow: 0 0 8px #ffcc0085;
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 90px;
+    max-height: 190px;
+}
+
+
+form button {
+    background: linear-gradient(90deg, #ffcc00 60%, #ffe066 100%);
+    color: #003366;
+    padding: 20px 10px;
+    font-size: 1.18rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 12px rgba(0, 31, 63, 0.15);
+    transition: background 0.3s, color 0.18s, transform 0.13s;
+    margin-bottom: .7em;
+}
+form button:hover {
+    background: #003366;
+    color: #ffcc00;
+    transform: scale(1.04);
+}
+
+/* ----------------------- RESPONSIVE BREAKPOINTS ----------------------- */
+@media (max-width: 1160px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 51, 102, 0.97);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    padding: 2rem;
+    gap: 1.5rem;
+    transition: all 0.4s;
+  }
+  nav ul.show-menu {
+    display: flex !important;
+  }
+
+  nav ul.show-menu li {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 1em 0;
+  }
+
+  .nav-link {
+    width: 220px;
+    display: block;
+    text-align: center;
+    padding: 1em 0;
+    font-size: 1.3em;
+    font-family: "Emblema One", serif;
+    border-radius: 12px;
+    background: #1366a7;
+    color: #fff;
+    margin: 0 auto;
+    transition: background 0.25s, color 0.2s, box-shadow 0.2s;
+    font-weight: bold;
+    box-sizing: border-box;
+  }
+
+  .nav-link.active {
+  background: #ffcc00;
+  color: #003366;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+  .aboutMain {
+    padding: 1.1em 0.2em;
+  }
+  .aboutMainContent {
+    padding: 1.05em 0.5em;
+    margin: 0.5em auto;
+    max-width: 98vw;
+    border-radius: 1em;
+  }
+  #aboutHeading {
+    font-size: 1.25em;
+    text-align: center;
+    padding: 0.3em 0.2em;
+    line-height: 1.2;
+  }
+  .aboutIntro img {
+    width: 65px;
+    height: 65px;
+  }
+  .aboutIntro h2 {
+    font-size: 1.05em;
+    margin: 0.3em 0;
+  }
+  .aboutMainText {
+    font-size: 0.99em;
+    line-height: 1.48;
+    padding: 0.1em;
+    text-align: left;
+  }
+  .aboutEnd {
+    font-size: 1em;
+    text-align: center;
+    margin-top: 1.5em;
+  }
+  .contact-container {
+    padding: 1.1em 0.3em;
+    max-width: 100vw;
+  }
+  .contact-avatar img {
+    width: 50px;
+    height: 50px;
+  }
+  .experienceDiv,
+  .educationDiv,
+  .techdeck-wrapper {
+    width: 97vw;
+    padding: 1.1em;
+  }
+  #gridContainer,
+  .techdeck-grid {
+    grid-template-columns: 1fr;
+    gap: 1.1em;
+  }
+}
+
+/* ========== EXTRA: FÖR MINSTA MOBIL ========== */
+@media (max-width: 600px) {
+  .aboutMainContent,
+  .experienceDiv,
+  .educationDiv,
+  .techdeck-wrapper {
+    padding: 0.6em 0.25em;
+    max-width: 98vw;
+    border-radius: 0.7em;
+  }
+  .aboutIntro img {
+    width: 48px;
+    height: 48px;
+  }
+  .contact-avatar img {
+    width: 36px;
+    height: 36px;
+  }
+  .job,
+  .techdeck-card {
+    padding: 1em 0.6em;
+  }
+  #aboutHeading,
+  .experienceHeader,
+  .techdeck-header {
+    font-size: 1.5em;
+  }
+}
+
+/* ----------------------- SLUT ----------------------- */
