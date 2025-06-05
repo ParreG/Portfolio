@@ -4,7 +4,7 @@ export default function Educations() {
     const [educations, setEducations] = useState([]);
 
     useEffect(() => {
-        fetch('/src/assets/MyData.json')
+        fetch('/Portfolio/MyData.json')
             .then(res => res.json())
             .then(setEducations);
     }, []);

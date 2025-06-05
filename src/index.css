@@ -16,7 +16,7 @@ body {
 header {
   background-color: #0077cc;
   height: 50em;
-  background-image: url("/Header-bild.JPEG");
+  background-image: url("/Portfolio/Header-bild.JPEG");
   background-size: cover;
   background-position: center;
   font-family: "Emblema One", serif;
@@ -114,7 +114,7 @@ nav ul li a:hover {
 .homeAside{
     background-color: royalblue;
     padding: 10%;
-    background-image: url("Aside-picture.JPEG");
+    background-image: url("/Portfolio/Aside-picture.JPEG");
     background-size: cover;
     background-position: center;
     grid-area: left;
@@ -141,7 +141,7 @@ nav ul li a:hover {
     background-color: rgb(3, 255, 255);
     padding: 1em;
     grid-area: middle;
-    background-image: url("main2.jpg");
+    background-image: url("/Portfolio/main2.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -258,7 +258,7 @@ nav ul li a:hover {
 /* ----------------------- Om mig ----------------------- */
 .aboutMain {
     padding: 3em;
-    background-image: url("about-main.jpg");
+    background-image: url("/Portfolio/about-main.jpg");
     background-size: cover;
     background-position: center;
     min-height: 80vh;
@@ -321,7 +321,7 @@ nav ul li a:hover {
 .experienceMain {
     color: #fdf0d6;
     min-height: 100vh;
-    background-image: url("work-picture.jpg");
+    background-image: url("/Portfolio/work-picture.jpg");
     background-size: cover;
     background-position: right;
     display: flex;
