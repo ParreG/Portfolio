@@ -1,0 +1,20 @@
+[
+  {
+    "school": "Chas Academy",
+    "program": "Fullstackutvecklare .NET",
+    "period": "2024-08 - 2026-05",
+    "description": "Under denna utbildning vid Chas Academy utvecklar jag kunskaper inom fullstackutveckling med fokus på .NET. Programmet kombinerar frontend- och backendutveckling, databashantering samt moderna ramverk och teknologier för att skapa dynamiska och skalbara applikationer. Utbildningen innehåller både teoretiska moment och praktiska projekt, vilket ger en stark grund för att arbeta som utvecklare inom branschen."
+  },
+  {
+    "school": "Södertörns Högskola",
+    "program": "Förskollärarprogrammet med interkulturell inriktning",
+    "period": "2019-01 - 2022-06",
+    "description": "Förskollärarprogrammet med interkulturell inriktning på Södertörns Högskola fokuserar på att förbereda studenter för arbete i mångkulturella förskolemiljöer. Programmet kombinerar pedagogik, barns utveckling och lärande med interkulturella perspektiv för att ge en bred förståelse av hur man arbetar inkluderande och främjar språkutveckling hos barn med olika bakgrunder. Under utbildningen ingår både teoretiska kurser och praktikperioder för att ge en stark grund för yrkesrollen som förskollärare."
+  },
+  {
+    "school": "Stockholms universitet",
+    "program": "Musikdidaktik (Musiklärare)",
+    "period": "2021-08 - 2022-06",
+    "description": "Under min utbildning till förskollärare växte mitt intresse för musik och hur den kan användas som ett pedagogiskt verktyg i undervisningen för barn. Som en följd av detta sökte jag två kurser vid Stockholms universitet som lade grunden för musikläraryrket. Att studera dessa kurser parallellt med Förskollärarprogrammet var en utmaning, men jag lyckades balansera båda utbildningarna på ett framgångsrikt sätt."
+  }
+]
