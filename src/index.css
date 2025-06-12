@@ -241,6 +241,7 @@ nav ul li a:hover {
 .socialLinks i:hover {
     color: #ffcc00;
     transform: scale(1.2);
+    cursor: pointer;
 }
 
 .footerQuote em {
@@ -271,7 +272,7 @@ nav ul li a:hover {
     color: white;
     font-size: 1.1em;
     border-radius: 1em;
-    max-width: 700px;
+    max-width: 800px;
     box-shadow: 0 4px 24px #00336633;
 }
 
@@ -368,6 +369,7 @@ nav ul li a:hover {
 .job:hover {
     transform: translateY(-5px);
     background: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
 }
 
 .job h3 {
@@ -458,6 +460,12 @@ nav ul li a:hover {
   border-radius: 10px;
   margin-bottom: 1.5em;
   box-shadow: 0 2px 8px #00336612;
+}
+
+.github-project:hover{
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
 }
 
 .project-header {
@@ -804,6 +812,18 @@ form button:hover {
   color: #003366;
   }
 
+    .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "left"
+      "middle";
+  }
+  .homeAside,
+  .homeMain {
+    padding: 7vw 3vw;
+    min-height: unset;
+  }
+
   .hamburger {
     display: flex;
   }
@@ -813,9 +833,10 @@ form button:hover {
   .aboutMainContent {
     padding: 1.05em 0.5em;
     margin: 0.5em auto;
-    max-width: 98vw;
+    max-width: 80vw;
     border-radius: 1em;
   }
+  
   #aboutHeading {
     font-size: 1.25em;
     text-align: center;
