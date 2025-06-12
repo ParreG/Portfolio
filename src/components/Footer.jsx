@@ -1,9 +1,9 @@
 export default function Footer(){
     return(
         <>
-            <footer class="siteFooter">
-                <div class="footerContent">
-                    <div class="footerLinks">
+            <footer className="siteFooter">
+                <div className="footerContent">
+                    <div className="footerLinks">
                         <p>📬 Mejla mig: <a href="mailto:Parman.Gitijah@gmail.com">Parman.Gitijah@gmail.com</a></p>
                         
                         <p className="followHeader">📱 Följ mig på sociala medier:</p>

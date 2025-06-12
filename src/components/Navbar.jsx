@@ -30,6 +30,7 @@ export default function Navbar() {
             <li><NavLink to="/Contact" className="nav-link" onClick={handleLinkClick}>Kontakt</NavLink></li>
           </ul>
         </nav>
+        <section className="headerPicture"></section>
       </section>
     </header>
   )
